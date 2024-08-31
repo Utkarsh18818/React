@@ -1,7 +1,13 @@
-
-function App() {
+import Chai from "./chai"
+function App() {   // if there is something html in returning then we named file as .jsx
+  // whenever you decalare a function then just make sure you name it in capitalised order.
+  // cause it also give and error.
   return (
-    <h1>Chai or react with vite | Yuvraj</h1>
+    <>            
+    <Chai/>
+    <h1>Chai aur raect</h1>
+    <p>Test para</p>
+    </>
   )
 }
 
