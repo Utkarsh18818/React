@@ -9,13 +9,21 @@ let [counter, setCounter] = useState(5)
 
   // let counter = 5;
   const addValue = () => {
-    counter+=1;
-    setCounter(counter);
+    setCounter(prevCounter=>{
+      if(prevCounter < 20){
+        return prevCounter+1;
+      }
+      return prevCounter;
+    });
   }
   const reduceVal = () =>{
-    counter-=1;
-    setCounter(counter)
-  }
+    setCounter(prevCounter=>{
+      if(prevCounter > 0){
+        return prevCounter - 1;
+      }
+      return prevCounter
+    })
+}
   return (
     <>
       <h1>Chai aur react</h1>
